@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Registration Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <p class="tag">ARVYS TECH • JAVASCRIPT PROJECT</p>
+  <h1>Student Registration &amp; Admission Portal</h1>
+
+  <section>
+    <h2>Student details</h2>
+    <form id="form" novalidate>
+      <div class="grid">
+        <label>Full name
+          <input id="name">
+          <span class="error" id="nameError"></span>
+        </label>
+        <label>Matriculation number
+          <input id="matric">
+          <span class="error" id="matricError"></span>
+        </label>
+        <label>Email address
+          <input id="email" type="email">
+          <span class="error" id="emailError"></span>
+        </label>
+        <label>Phone number
+          <input id="phone" type="tel">
+          <span class="error" id="phoneError"></span>
+        </label>
+        <label>Age
+          <input id="age" type="number">
+          <span class="error" id="ageError"></span>
+        </label>
+        <label>Department
+          <select id="department">
+            <option value="">Choose department</option>
+            <option>Computer Science</option>
+            <option>Mathematics</option>
+            <option>Statistics</option>
+            <option>Physics</option>
+            <option>Chemistry</option>
+            <option>Other</option>
+          </select>
+          <span class="error" id="departmentError"></span>
+        </label>
+        <label>Password
+          <input id="password" type="password">
+          <span class="hint">At least 8 characters, with a letter and a number.</span>
+          <span class="error" id="passwordError"></span>
+        </label>
+      </div>
+      <button type="submit">Register student</button>
+      <p id="message"></p>
+    </form>
+  </section>
+
+  <section>
+    <h2>Registered students — Total: <span id="count">0</span></h2>
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr><th>Name</th><th>Matric No.</th><th>Email</th><th>Phone</th><th>Age</th><th>Department</th></tr>
+        </thead>
+        <tbody id="rows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
